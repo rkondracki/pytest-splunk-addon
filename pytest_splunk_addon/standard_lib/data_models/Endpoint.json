@@ -19,7 +19,8 @@
         },
         {
           "name": "dest_port",
-          "type": "required",
+          "type": "conditional",
+          "condtion": "protocol=\"ip\" OR protocol=\"udp\"",
           "validity": "if(isnum(dest_port),dest_port,null())",
           "comment": "Network port listening on the endpoint, such as 53."
         },
@@ -40,7 +41,8 @@
         },
         {
           "name": "src_port",
-          "type": "required",
+          "type": "conditional",
+          "condtion": "protocol=\"ip\" OR protocol=\"udp\"",
           "validity": "if(isnum(src_port),src_port,null())",
           "comment": "The 'remote' port connected to the listening port (if applicable)."
         },

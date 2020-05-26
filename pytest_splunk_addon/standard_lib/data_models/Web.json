@@ -27,7 +27,8 @@
         },
         {
           "name": "dest_port",
-          "type": "required",
+          "type": "conditional",
+          "condtion": "protocol=\"ip\" OR protocol=\"udp\"",
           "validity": "if(isnum(dest_port),dest_port,null())",
           "comment": "The destination port of the web traffic."
         },

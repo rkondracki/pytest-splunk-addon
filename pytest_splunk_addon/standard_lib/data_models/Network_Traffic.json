@@ -75,7 +75,7 @@
         {
           "name": "dest_port",
           "type": "conditional",
-          "condition": "protocol=ip",
+          "condition": "protocol=\"ip\" OR protcol=\"udp\"",
           "validity": "if(isnum(dest_port),dest_port,null())",
           "comment": "The destination port of the network traffic. Note: Do not translate the value of this field to a string (tcp/80 is 80, not http). You can set up the corresponding string value in the dest_svc field."
         },
@@ -275,7 +275,7 @@
         {
           "name": "src_port",
           "type": "conditional",
-          "condition": "protocol=ip",
+          "condition": "protocol=\"ip\" OR protocol=\"udp\"",
           "validity": "if(isnum(src_port),src_port,null())",
           "comment": "The source port of the network traffic. Note: Do not translate the value of this field to a string (tcp/80 is 80, not http). You can set up the corresponding string value in the src_svc field."
         },
