@@ -17,8 +17,7 @@
             },
             {
                 "name": "dest_port",
-                "type": "conditional",
-                "condtion": "protocol=\"ip\" OR protocol=\"udp\"",
+                "type": "optional",
                 "validity": "if(isnum(dest_port),dest_port,null())",
                 "comment":"The port number of the target." 
             },
@@ -46,8 +45,7 @@
             },
             {
                 "name": "src_port",
-                "type": "conditional",
-                "condtion": "protocol=\"ip\" OR protocol=\"udp\"",
+                "type": "optional",
                 "validity": "if(isnum(src_port),src_port,null())",
                 "comment":"The port number of the source." 
             },
